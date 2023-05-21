@@ -14,13 +14,11 @@ fn main () {
 
     let which: u32 = which.trim().parse().expect("Please type a number");
     
-    let result;
-
-    if which == 1 as u32 {
-        result = grab::get_user_data(true);
+    let result = if which == 1 as u32 {
+        grab::get_user_data(true)
     } else {
-        result = grab::get_user_data(false);
-    }
+        grab::get_user_data(false)
+    };
 
     let mut env = Environment::new();
 

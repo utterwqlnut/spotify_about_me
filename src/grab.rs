@@ -30,24 +30,26 @@ pub async fn get_user_data(long:bool) -> Grabber {
             let name = info.display_name;
 
             //get the pfp 
-            let pfp;
-            match info.images {
+            let pfp = match info.images {
 
                 Some(list) => {
-                    pfp = Some(list[0].url.clone());
+                    if list.len() == 0 {
+                        Some(String::from("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3Prp8mclhZXHX1yhnjQybmT7d0HnSFv7zSijfKjtpvQ&usqp=CAU&ec=48665701"))
+                    } else {
+                        Some(list[0].url.clone())
+                    }   
                 },
                 None => {
-                    pfp = None;
+                    Some(String::from("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3Prp8mclhZXHX1yhnjQybmT7d0HnSFv7zSijfKjtpvQ&usqp=CAU&ec=48665701"))
                 }
-            }
+            };
 
             //get follower count
-            let followers: Option<u32>;
-            if let Some(total) = info.followers { 
-                followers = Some(total.total);
+            let followers: Option<u32> = if let Some(total) = info.followers { 
+                Some(total.total)
             } else {
-                followers = None;
-            } 
+                None
+            };
 
             if long {
                 let result = spotify.current_user_top_artists(Some(LongTerm));

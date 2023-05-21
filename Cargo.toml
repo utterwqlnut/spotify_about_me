@@ -9,3 +9,4 @@ edition = "2021"
 reqwest = "0.11.17"
 tokio = { version = "1.28.1", features = ["full"] } 
 rspotify = { version = "0.11.7", features = ["cli","client-ureq","env-file","ureq-rustls-tls"], default-features = false}
+minijinja = "0.32.1"

@@ -1,7 +1,7 @@
 use crate::grab::*;
 use std::fs;
 use std::io;
-use std::process::Command;
+use webbrowser;
 use minijinja::{Environment, context};
 pub mod grab;
 
@@ -43,6 +43,8 @@ fn main () {
         },
     }
 
-    let _command = Command::new("zsh").arg("-c").arg("open about_me.html").spawn().expect("issue opening file");
+    if !webbrowser::open("about_me.html").is_ok() {
+        panic!("could not open html file");
+    }
 
 }

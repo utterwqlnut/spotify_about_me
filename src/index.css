@@ -1,0 +1,19 @@
+html{
+	height:100%;
+	width: 100%;
+	background-image: linear-gradient(to bottom left, #ece9e6,#ffffff);
+}
+body{
+	font-family: 'Open Sans';
+}
+h2{
+	font-size: 22px;
+	line-height:30px;
+	color: #4F4536;
+}
+p{
+	color: #4F4536;
+	font-size: 18px;
+	letter-spacing: 2px;
+	line-height: 30px;
+}

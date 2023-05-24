@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="stylesheet" href="index.css">
     <title>Spotify About Me</title>
 </head>
 <body>
 	<h1>{{ user }}'s about me</h1>
 	<img src = "{{ img }}"/>
-	<h2>Recently Played: {{ recent }}</h2>
-	<h2>Top Artists</h2>
+	<h2>recently played: {{ recent }}</h2>
+	<h2>top artists</h2>
 	{% for artist in artists %}
 	  <li>{{ artist }}</li>
 	{% endfor %}
-	<h2>Top Songs</h2>
+	<h2>top songs</h2>
 	{% for song in songs %}
 	  <li>{{ song }}</li>
 	{% endfor %}

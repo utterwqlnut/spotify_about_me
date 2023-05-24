@@ -1,27 +1,21 @@
 html{
 	height:100%;
 	width: 100%;
-	background-image: linear-gradient(to bottom left, #ece9e6,#ffffff);
+	background-color: #000;
 }
 body{
-	font-family: 'Open Sans';
-}
-h2{
-	font-size: 22px;
-	line-height:30px;
-	color: #4F4536;
-}
-h1{
-	line-height:30px;
-	color: #4F4536;
-}
-h3{
-	line-height:30px;
-	color: #4F4536;
+	font-family: "Roboto", sans-serif;
+	color: #FFFFFF;
 }
 p{
-	color: #4F4536;
+	font-size: 12px;
+}
+h1{
+	font-size: 40px;
+}
+h2{
 	font-size: 18px;
-	letter-spacing: 2px;
-	line-height: 30px;
+}
+h3{
+	font-size: 16px;
 }
